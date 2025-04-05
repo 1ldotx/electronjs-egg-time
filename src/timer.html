@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Egg Timer - Countdown</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=577, height=700, user-scalable=no" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        script-src 'self' 'unsafe-inline';
+        img-src 'self' data:;
+      "
+    />
+  </head>
+  <body class="timer-bg">
+    <header class="top-bar">
+      <!-- <div class="minimize-close-controls">
+        <img
+          src="../asset/minimizebutton_EggTimer.png"
+          alt="Minimize"
+          id="minimize-btn"
+        />
+        <img
+          src="../asset/closebutton_EggTimer.png"
+          alt="Close"
+          id="close-btn"
+        />
+      </div> -->
+    </header>
+
+    <main class="timer-container">
+      <h2 id="subtitle">Your Egg Is Ready In...</h2>
+
+      <!-- Only ONE image, it will update dynamically -->
+      <div class="egg-sequence">
+        <img id="egg-animation" src="../asset/spritesheet/frame_0_0.png" />
+      </div>
+
+      <h2 id="timer">05:00</h2>
+    </main>
+
+    <script src="renderer.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const basePath = window.location.origin;
+        const frames = [
+          `${basePath}/asset/spritesheet/frame_0_0.png`,
+          `${basePath}/asset/spritesheet/frame_0_1.png`,
+          `${basePath}/asset/spritesheet/frame_0_2.png`,
+          `${basePath}/asset/spritesheet/frame_0_3.png`,
+        ];
+
+        let currentFrame = 0;
+        const eggImage = document.getElementById("egg-animation");
+
+        function playEggAnimation() {
+          eggImage.src = frames[currentFrame];
+          currentFrame++;
+
+          if (currentFrame >= frames.length) {
+            currentFrame = 0;
+          }
+
+          setTimeout(playEggAnimation, 490);
+        }
+
+        playEggAnimation();
+      });
+    </script>
+  </body>
+</html>

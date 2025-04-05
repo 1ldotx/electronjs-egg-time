@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Egg Timer</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=577, height=700, user-scalable=no" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+    default-src 'self';
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    font-src 'self' https://fonts.gstatic.com;
+    script-src 'self';
+    img-src 'self' data:;
+  "
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="home-bg">
+    <header>
+      <!-- <div class="minimize-close-controls">
+        <img
+          src="../asset/minimizebutton_EggTimer.png"
+          alt="Minimize"
+          id="minimize-btn"
+        />
+        <img
+          src="../asset/closebutton_EggTimer.png"
+          alt="Close Button"
+          id="close-btn"
+        />
+      </div> -->
+    </header>
+
+    <main class="home">
+      <h1 class="title">Time Your Egg!</h1>
+      <button id="start-btn" class="start-button">Start</button>
+      <!-- Custom UI button -->
+    </main>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>

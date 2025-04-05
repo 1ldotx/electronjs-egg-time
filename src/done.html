@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Egg Timer - Done</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta
+  http-equiv="Content-Security-Policy"
+  content="
+    default-src 'self';
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    font-src 'self' https://fonts.gstatic.com;
+    script-src 'self';
+    img-src 'self' data:;
+  "
+/>
+
+
+  </head>
+  <body class="done-bg">
+    <header class="top-bar">
+        <meta name="viewport" content="width=577, height=700, user-scalable=no" />
+      <!-- <div class="minimize-close-controls">
+        <img
+          src="../asset/minimizebutton_EggTimer.png"
+          alt="Minimize"
+          id="minimize-btn"
+        />
+        <img src="../asset/closebutton_EggTimer.png" alt="Close" id="close-btn" />
+      </div> -->
+    </header>
+
+    <main class="done-container">
+        <img id="done-egg" src="../asset/spritesheet/frame_0_1.png" alt="Egg is done!" />
+        <h1 class="title"><span id="egg-name"></span> is Done!</h1>
+        <div class="button-group">
+          <button id="snooze-btn" class="styled-button">Snooze</button>
+          <button id="back-btn" class="styled-button">Back</button>
+        </div>
+      </main>
+      
+    </main>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>

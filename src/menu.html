@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Egg Timer</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=577, height=700, user-scalable=no" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+    default-src 'self';
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    font-src 'self' https://fonts.gstatic.com;
+    script-src 'self';
+    img-src 'self' data:;
+  "
+    />
+  </head>
+  <body class="menu-bg">
+    <header>
+      <!-- <div class="minimize-close-controls">
+        <img
+          src="../asset/minimizebutton_EggTimer.png"
+          alt="Minimize"
+          id="minimize-btn"
+        />
+        <img
+          src="../asset/closebutton_EggTimer.png"
+          alt="Close"
+          id="close-btn"
+        />
+      </div> -->
+    </header>
+
+    <main class="menu">
+      <h2>What egg are you making today?</h2>
+      <div class="egg-options">
+        <div class="egg-btn" data-time="300" data-name="Soft Boiled Egg">
+          <img src="../asset/softboiledegg.png" alt="Soft Boiled" />
+          <p>Soft Boiled</p>
+        </div>
+        <div class="egg-btn" data-time="600" data-name="Hard Boiled Egg">
+          <img src="../asset/hardboiledegg.png" alt="Hard Boiled" />
+          <p>Hard Boiled</p>
+        </div>
+        <div class="egg-btn" data-time="240" data-name="Fried Egg">
+          <img src="../asset/friedegg.png" alt="Fried Egg" />
+          <p>Fried Egg</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,275 @@
+/* Header positioning */
+header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 40px; /* Adjust as needed */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10px; /* Adjust spacing */
+}
+
+/* Minimize and Close button container */
+.minimize-close-controls {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  padding: 5px;
+}
+
+/* Minimize & Close buttons */
+.minimize-close-controls img {
+  width: 25px; /* Adjust size */
+  height: 25px;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.minimize-close-controls img:hover {
+  opacity: 0.7;
+}
+
+body {
+  margin: 0;
+  width: 577px;
+  height: 700px;
+  overflow: hidden; /* Prevent scrolling if content exceeds */
+  font-family: "Geist", sans-serif;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Backgrounds for each screen */
+.home-bg {
+  background-image: url("../asset/bg_home_EggTimer.png");
+}
+.menu-bg {
+  background-image: url("../asset/bg_menu_EggTimer.png");
+}
+.timer-bg {
+  background-image: url("../asset/bg_timer_EggTimer.png");
+}
+.done-bg {
+  background-image: url("../asset/bg_timer_EggTimer.png");
+}
+
+/* Title */
+h1.title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.start-button {
+  background-color: black; /* Button background */
+  color: white; /* Text color */
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #666; /* Grey border */
+  padding: 8px 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.start-button:first-child {
+  margin-right: 15px; /* Adds space between the two buttons */
+}
+
+.start-button:hover {
+  background-color: #222; /* Slightly lighter black on hover */
+}
+
+/* Egg selection buttons */
+.egg-btn {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Menu */
+.menu {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.egg-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Ensure correct grid placement */
+.egg-btn:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+} /* Soft Boiled */
+.egg-btn:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+} /* Hard Boiled */
+.egg-btn:nth-child(3) {
+  grid-column: 2;
+  grid-row: 2;
+} /* Fried Egg under Hard Boiled */
+
+/* Styling the Egg Selection Buttons */
+.egg-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center everything inside */
+  width: 160px; /* Adjust button size */
+  height: 180px; /* Adjust button size */
+  background: rgba(255, 255, 255, 0.1); /* Light transparent background */
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative; /* Needed for absolute positioning */
+}
+
+.egg-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Ensure Images Fit Properly */
+.egg-btn img {
+  width: auto; /* Keeps aspect ratio */
+  height: 155px; /* Adjust as needed */
+  display: block; /* Prevents extra spacing */
+  margin-bottom: 10px; /* Adds space between image and text */
+}
+
+.egg-btn p {
+  position: absolute;
+  bottom: -45px; /* Moves text lower without affecting the image */
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Subtitle: "Your Egg is ready in..." */
+.subtitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Egg Animation */
+.egg-sequence {
+  width: 220px;
+  height: 260px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Hide all frames except the active one */
+.egg-sequence .frame {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Show only active frame */
+.egg-sequence .frame.active {
+  opacity: 1;
+}
+
+/* Countdown Timer */
+#timer {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Timer Page Styling */
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Aligns items from the top */
+  height: 100vh;
+  text-align: center;
+  padding-top: 60px; /* Moves everything down */
+}
+
+/* Subtitle: "Your Egg is ready in..." */
+/* Subtitle Positioning */
+#subtitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 80px; /* Adjust spacing BELOW subtitle */
+  margin-top: 89px; /* Adjust spacing ABOVE subtitle */
+}
+
+/* Egg Animation (Lowered) */
+.egg-sequence {
+  width: 220px;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px; /* Increases spacing below animation */
+}
+
+/* Timer Styling (Lowered More) */
+#timer {
+  font-size: 52px;
+  font-weight: bold;
+  color: white;
+  margin-top: 20px; /* Pushes timer lower */
+}
+
+.styled-button {
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #666;
+  padding: 8px 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.styled-button:first-child {
+  margin-right: 15px; /* Adds space between the two buttons */
+}
+
+.styled-button:hover {
+  background-color: #222; /* Slightly lighter black on hover */
+}
+
+.stick-figure {
+  position: absolute;
+  bottom: 0; /* Make sure it touches the bottom */
+  left: 10px; /* Adjust left spacing */
+  width: 120px; /* Resize if needed */
+  height: auto;
+  z-index: 10; /* Ensure it's above other elements */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Make sure everything fits */
+  padding-bottom: 20px; /* Give extra space at bottom */
+}
